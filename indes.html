@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoPack - Embalagens Sustentáveis</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        🌿 EcoPack
+    </div>
+
+    <nav>
+
+        <a href="#inicio">Início</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#sementes">Sementes</a>
+        <a href="#pedido">Pedido</a>
+
+    </nav>
+
+</header>
+
+
+<section class="banner" id="inicio">
+
+    <div class="banner-texto">
+
+        <h1>Embalagens que Florescem 🌸</h1>
+
+        <p>
+            Nossa embalagem é produzida com folhas recicladas de caderno
+            misturadas com sementes de flores.
+            Após o uso, basta plantar e ajudar o meio ambiente.
+        </p>
+
+        <a href="#produtos" class="botao">
+            Escolher Embalagem
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<section class="produtos" id="produtos">
+
+<h2>Escolha sua Embalagem</h2>
+
+<div class="cards">
+
+<div class="card" onclick="selecionarProduto('15x10x06',12)">
+<img src="imagens/caixa1.png">
+<h3>15 x 10 x 06 cm</h3>
+<p>R$12,00</p>
+</div>
+
+<div class="card" onclick="selecionarProduto('20x14x07',15)">
+<img src="imagens/caixa2.png">
+<h3>20 x 14 x 07 cm</h3>
+<p>R$15,00</p>
+</div>
+
+<div class="card" onclick="selecionarProduto('28x17x07',18)">
+<img src="imagens/caixa3.png">
+<h3>28 x 17 x 07 cm</h3>
+<p>R$18,00</p>
+</div>
+
+<div class="card" onclick="selecionarProduto('30x22x11',22)">
+<img src="imagens/caixa4.png">
+<h3>30 x 22 x 11 cm</h3>
+<p>R$22,00</p>
+</div>
+
+<div class="card" onclick="selecionarProduto('35x28x11',26)">
+<img src="imagens/caixa5.png">
+<h3>35 x 28 x 11 cm</h3>
+<p>R$26,00</p>
+</div>
+
+<div class="card" onclick="selecionarProduto('38x29x16',32)">
+<img src="imagens/caixa6.png">
+<h3>38 x 29 x 16 cm</h3>
+<p>R$32,00</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="produtos">
+
+<h2>Envelopes</h2>
+
+<div class="cards">
+
+<div class="card" onclick="selecionarProduto('Envelope A5',8)">
+<img src="imagens/a5.png">
+<h3>Envelope A5</h3>
+<p>R$8,00</p>
+</div>
+
+<div class="card" onclick="selecionarProduto('Envelope A4',10)">
+<img src="imagens/a4.png">
+<h3>Envelope A4</h3>
+<p>R$10,00</p>
+</div>
+
+<div class="card" onclick="selecionarProduto('Envelope A3',13)">
+<img src="imagens/a3.png">
+<h3>Envelope A3</h3>
+<p>R$13,00</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="sementes" id="sementes">
+
+<h2>Escolha a Semente</h2>
+
+<div class="sementes-card">
+
+<button onclick="selecionarSemente('Amor-perfeito')">
+🌸 Amor-perfeito
+</button>
+
+<button onclick="selecionarSemente('Petúnia')">
+🌺 Petúnia
+</button>
+
+<button onclick="selecionarSemente('Lobélia')">
+💙 Lobélia
+</button>
+
+</div>
+
+</section>
+
+
+
+<section class="pedido" id="pedido">
+
+<h2>Quantidade</h2>
+
+<div class="quantidade">
+
+<button onclick="diminuir()">
+-
+</button>
+
+<span id="quantidade">
+1
+</span>
+
+<button onclick="aumentar()">
++
+</button>
+
+</div>
+
+<br><br>
+
+<h2>Calcular Frete</h2>
+
+<input
+type="text"
+id="cep"
+placeholder="Digite seu CEP">
+
+<button onclick="calcularFrete()">
+Calcular
+</button>
+
+<p id="valorFrete">
+Frete: R$0,00
+</p>
+
+</section>
+
+
+
+<section class="resumo">
+
+<h2>Resumo do Pedido</h2>
+
+<div class="resumo-box">
+
+<p>
+
+<strong>Produto:</strong>
+
+<span id="produtoSelecionado">
+Nenhum
+</span>
+
+</p>
+
+<p>
+
+<strong>Semente:</strong>
+
+<span id="sementeSelecionada">
+Nenhuma
+</span>
+
+</p>
+
+<p>
+
+<strong>Quantidade:</strong>
+
+<span id="quantidadeResumo">
+1
+</span>
+
+</p>
+
+<p>
+
+<strong>Subtotal:</strong>
+
+R$
+
+<span id="subtotal">
+0.00
+</span>
+
+</p>
+
+<p>
+
+<strong>Frete:</strong>
+
+R$
+
+<span id="frete">
+0.00
+</span>
+
+</p>
+
+<hr>
+
+<h3>
+
+Total
+
+R$
+
+<span id="total">
+0.00
+</span>
+
+</h3>
+
+</div>
+
+</section>
+
+
+
+<footer>
+
+<p>
+
+Projeto Escolar • EcoPack © 2026
+
+</p>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

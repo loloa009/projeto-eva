@@ -1,0 +1,466 @@
+```css
+/* ===========================
+      CONFIGURAÇÕES GERAIS
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f7f3;
+    color:#333;
+}
+
+/* ===========================
+          HEADER
+=========================== */
+
+header{
+    background:#2E7D32;
+    color:white;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 8%;
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+}
+
+nav a{
+
+    text-decoration:none;
+    color:white;
+
+    margin-left:30px;
+
+    transition:.3s;
+}
+
+nav a:hover{
+
+    color:#c8f7c5;
+
+}
+
+/* ===========================
+          BANNER
+=========================== */
+
+.banner{
+
+    height:90vh;
+
+    background:linear-gradient(rgba(0,0,0,.45),
+    rgba(0,0,0,.45)),
+    url("imagens/banner.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+.banner-texto{
+
+    width:70%;
+
+}
+
+.banner h1{
+
+    font-size:60px;
+    margin-bottom:20px;
+
+}
+
+.banner p{
+
+    font-size:22px;
+    margin-bottom:40px;
+
+}
+
+.botao{
+
+    background:#66BB6A;
+
+    padding:16px 35px;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+.botao:hover{
+
+    background:#388E3C;
+
+}
+
+/* ===========================
+      TÍTULOS
+=========================== */
+
+section h2{
+
+    text-align:center;
+
+    margin-top:70px;
+    margin-bottom:40px;
+
+    font-size:38px;
+
+    color:#2E7D32;
+
+}
+
+/* ===========================
+      CARDS
+=========================== */
+
+.cards{
+
+    width:90%;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+    margin-bottom:70px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    text-align:center;
+
+    padding-bottom:20px;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+
+}
+
+.card img{
+
+    width:100%;
+    height:220px;
+
+    object-fit:cover;
+
+}
+
+.card h3{
+
+    margin-top:20px;
+
+    color:#2E7D32;
+
+}
+
+.card p{
+
+    margin-top:10px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+.card.selecionado{
+
+    border:4px solid #4CAF50;
+
+}
+
+/* ===========================
+      SEMENTES
+=========================== */
+
+.sementes-card{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:70px;
+
+}
+
+.sementes-card button{
+
+    padding:18px 28px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 5px 12px rgba(0,0,0,.10);
+
+}
+
+.sementes-card button:hover{
+
+    background:#4CAF50;
+
+    color:white;
+
+}
+
+/* ===========================
+        PEDIDO
+=========================== */
+
+.pedido{
+
+    text-align:center;
+
+}
+
+.quantidade{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+.quantidade button{
+
+    width:55px;
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#4CAF50;
+
+    color:white;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+}
+
+.quantidade span{
+
+    font-size:30px;
+
+    font-weight:bold;
+
+}
+
+input{
+
+    margin-top:25px;
+
+    width:260px;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    border:2px solid #ccc;
+
+    font-size:16px;
+
+}
+
+.pedido button{
+
+    margin-top:20px;
+
+    padding:15px 28px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#2E7D32;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+}
+
+/* ===========================
+      RESUMO
+=========================== */
+
+.resumo{
+
+    margin:80px auto;
+
+}
+
+.resumo-box{
+
+    width:450px;
+
+    max-width:90%;
+
+    margin:auto;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.10);
+
+}
+
+.resumo-box p{
+
+    margin-bottom:18px;
+
+    font-size:18px;
+
+}
+
+.resumo-box hr{
+
+    margin:25px 0;
+
+}
+
+.resumo-box h3{
+
+    color:#2E7D32;
+
+    font-size:30px;
+
+}
+
+/* ===========================
+        FOOTER
+=========================== */
+
+footer{
+
+    margin-top:70px;
+
+    background:#2E7D32;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+}
+
+/* ===========================
+      RESPONSIVO
+=========================== */
+
+@media(max-width:900px){
+
+header{
+
+    flex-direction:column;
+
+}
+
+nav{
+
+    margin-top:20px;
+
+}
+
+nav a{
+
+    display:block;
+
+    margin:10px 0;
+
+}
+
+.banner h1{
+
+    font-size:40px;
+
+}
+
+.banner p{
+
+    font-size:18px;
+
+}
+
+}
+```
+
+```
+```
