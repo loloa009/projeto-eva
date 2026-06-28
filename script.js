@@ -1,6 +1,6 @@
 ```javascript
 // ==========================
-// VARIÁVEIS
+// VARIAVEIS
 // ==========================
 
 let produtoSelecionado = "";
@@ -91,7 +91,7 @@ function calcularFrete(){
 
     if(cep.length < 8){
 
-        alert("Digite um CEP válido.");
+        alert("Digite um CEP valido.");
 
         return;
 
